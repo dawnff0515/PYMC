@@ -18,8 +18,8 @@ jobs:
       - name: Docker login
         uses: docker/login-action@v3
         with:
-          username: dawn000515@163.com
-          password: asdASD0515
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
